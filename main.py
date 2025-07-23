@@ -39,6 +39,13 @@ if __name__ == "__main__":
             multa = multa_localidade(velocidade)
             elif escolha == 2:
             multa = multa_fora_localidade(velocidade)
+            elif escolha == 3:
+            multa = multa_autoestrada(velocidade)
+            if multa == 0:
+                print("\nSem multa. Velocidade dentro do limite.")
+            else:
+                print(f"\nMulta aplicada: {multa}€")
+
             if multa == 0:
                 print("\nSem multa. Velocidade dentro do limite.")
             else:
