@@ -11,6 +11,15 @@ def menu():
         return -1
 
 def obter_velocidade():
+    def multa_localidade(velocidade: float) -> int:
+    if velocidade <= 50:
+        return 0
+    elif velocidade <= 90:
+        return 60
+    elif velocidade < 120:
+        return 120
+    else:
+        return 320
     try:
         return float(input("Introduza a velocidade do veículo (km/h): "))
     except ValueError:
