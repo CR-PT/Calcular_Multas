@@ -35,6 +35,13 @@ if __name__ == "__main__":
             break
         elif escolha in (1, 2, 3):
             velocidade = obter_velocidade()
+            if escolha == 1:
+            multa = multa_localidade(velocidade)
+            if multa == 0:
+                print("\nSem multa. Velocidade dentro do limite.")
+            else:
+                print(f"\nMulta aplicada: {multa}€")
+
             # (vamos adicionar aqui a lógica de multas no próximo passo)
         else:
             print("Opção inválida!")
